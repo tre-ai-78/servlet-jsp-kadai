@@ -27,10 +27,10 @@ public class ConfirmServlet extends HttpServlet {
 		userAddress = Objects.toString(userAddress, "");
 		phoneNumber = Objects.toString(phoneNumber, "");
 		
-		request.setAttribute("userName", userName);
-		request.setAttribute("userEmail", userEmail);
-		request.setAttribute("userAddress", userAddress);
-		request.setAttribute("phoneNumber", phoneNumber);
+		request.setAttribute("name", userName);
+		request.setAttribute("email", userEmail);
+		request.setAttribute("address", userAddress);
+		request.setAttribute("phone_number", phoneNumber);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/confirmPage.jsp");
 		dispatcher.forward(request, response);
